@@ -9,15 +9,36 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
 
+<<<<<<< HEAD
+=======
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+>>>>>>> 1e8ff7fef740e9228987f811729a571702afa9f9
     steps:
       - name: Check out code
         uses: actions/checkout@v4
 
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 1e8ff7fef740e9228987f811729a571702afa9f9
       - name: Set up Go Toolchain
         uses: actions/setup-go@v5
         with:
           go-version: '1.23.0'
 
+<<<<<<< HEAD
       - name: Run Production Build Script
         run: scripts/buildprod.sh
 
+=======
+      - name: Install Goose
+        run: go install github.com/pressly/goose/v3/cmd/goose@latest
+
+      - name: Migrate DB
+        run: scripts/migrateup.sh
+
+      - name: Run Production Build Script
+        run: scripts/buildprod.sh
+>>>>>>> 1e8ff7fef740e9228987f811729a571702afa9f9
