@@ -33,6 +33,9 @@ jobs:
       - name: 'Use gcloud CLI'
         run: 'gcloud info'
 
+      - name: List files DEBUGGING PORPUSE
+        run: ls -la
+
       - name: Build and push Docker image
         run: gcloud builds submit --tag us-central1-docker.pkg.dev/notely-444314/notely-ar-repo/notely . 
 
