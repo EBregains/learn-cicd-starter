@@ -26,4 +26,5 @@ You do *not* need to set up a database or any interactivity on the webpage yet. 
 
 ## Next
 
- - [] We will add tests to CICD
+ - [x] We will add tests to CI
+ - [x] We will add comands and scripts to CD in GCP
